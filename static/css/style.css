@@ -1,0 +1,52 @@
+main{
+  margin-left: 5%;
+  margin-right:5%;
+}
+
+footer {
+  padding-top: 2%;
+
+  position: relative;
+
+  margin-top: 10%;
+
+  width: 100%;
+
+  height: 100px;
+
+  background-color: #e6e6e6;
+}
+
+li{
+  margin:2px;
+}
+
+#header {
+font-size: 1.4em;
+  font-family:Bookman, serif;
+}
+
+#header_marche{
+font-size: 1.5em;
+font-family:Impact, fantasy;
+}
+
+#header_marche:hover{
+  color:black;
+}
+
+#label_msg1{
+  text-align: center;
+  background-color: orange;
+  border-radius: 10px;
+  padding:1%;
+  font-size: 1.3em;
+}
+
+#label_msg2{
+  text-align: center;
+  background-color: green;
+  border-radius: 10px;
+  padding:1%;
+  font-size: 1.3em;
+}
