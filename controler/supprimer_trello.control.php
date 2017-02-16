@@ -9,8 +9,8 @@ $data = json_decode(stripslashes($_POST['data']));
   foreach($data as $d){
      echo $d;
   }
-  header("location: index.php?page=formulaire"); //redirection sur index.php
-  exit();
+  // header("location: index.php?page=formulaire"); //redirection sur index.php
+  // exit();
 // $check = "-";
 // foreach($_POST["secteur"] as $checkoptions){
 // $check .= $checkoptions."-";

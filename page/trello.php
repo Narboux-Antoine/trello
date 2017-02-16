@@ -45,6 +45,7 @@ $_SESSION['user_id'];
 
 <div class="row">
 <?php
+$compt=0;
 $req = $bdd->prepare('SELECT * FROM liste ');
  $req->execute();
  // WHERE id_user = ?
@@ -67,6 +68,13 @@ while ($donnees = $req->fetch()){
             echo '<input id="secteur" value='.$donnees2['id'].' id="checksecteur" name="secteur[]" type="checkbox"><label for="checkbox">'.$donnees2['titre']."<br>".$donnees2['contenu'].'</label>';  // affichage
             //echo '</div>';
             echo '</div>';
+            $string=$donnees2['id']+$compt;
+            echo $string;
+            echo '<p><a data-open='.$donnees2['id']'>Commentaires</a></p>';
+            echo '<div class="tiny reveal" id='.$donnees2['id']' data-reveal>
+              CouCOU
+            </div> ';
+            $compt++;
         }
 
         ?>
@@ -120,9 +128,16 @@ while ($donnees = $req->fetch()){
 </div>
 
 
-
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="/trello/static/js/trello.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="/trello/static/js/admin.js"></script>
+  <script src="/trello/static/js/vendor/jquery.js"></script>
+  <script src="/trello/static/js/vendor/foundation.min.js"></script>
+  <script src="/trello/static/js/vendor/what-input.js"></script>
+  <script>
+      $(document).foundation();
+  </script>
 <!-- <script>
 $("#button_ajout").click(function(){
   var aaa = " <?php echo "Bonjour".$_SESSION['user_id'];  ?>";

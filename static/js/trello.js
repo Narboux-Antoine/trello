@@ -67,9 +67,9 @@ var jsonString = JSON.stringify(valeurs);
 alert(jsonString);
 
 $.ajax({
-      method:"POST",
-      url:"index.php?page=ajout_trello&status=controler",
-      data: {data : jsonString},
+      
+      url:"index.php?page=supprimer_trello&status=controler",
+      data: {data:jsonString},
       cache: false,
       success: function(){
         //  window.location.href ="index.php?page=trello";
@@ -84,16 +84,16 @@ $.ajax({
 
 
 //////AJOUTER////
-// $("#button_add1").click(function(){
-//   var titre = $("input[name=titre]").val();
-//   var contenu = $("select[name=contenu]").val();
-//
-// $.ajax({
-//       method:"POST",
-//       url:"index.php?page=ajout_trello&status=controler",
-//       data: "titre=" + titre +"&contenu=" +contenu ,
-//       success: function(){
-//         //  window.location.href ="index.php?page=trello";
-//       }
-//       });
-// });
+$("#button_add1").click(function(){
+  var titre = $("input[name=titre]").val();
+  var contenu = $("select[name=contenu]").val();
+
+$.ajax({
+      method:"POST",
+      url:"index.php?page=ajout_trello&status=controler",
+      data: "titre=" + titre +"&contenu=" +contenu ,
+      success: function(){
+        //  window.location.href ="index.php?page=trello";
+      }
+      });
+});
